@@ -56,17 +56,17 @@ for candidate in candidates:
         winning_candidate_votes=current_votes
 
 # print the result to file
-out_file_path='PyPoll\Resources\election_data.txt'
+out_file_path=r'PyPoll\analysis\analysis.txt'
 with open (out_file_path,'w') as file_out:
     file_out.write('Election Results\n')
     file_out.write('---------------------------------\n')
-    file_out.write(f'Total Votes = {total_votes}\n')
+    file_out.write(f'Total Votes : {total_votes}\n')
     file_out.write('---------------------------------\n')
 
     for candidate in candidates:
         current_candidate_votes = candidate_votes[candidates.index(candidate)]
         current_vote_pct= (current_candidate_votes/total_votes )*100
-        file_out.write(f'{candidate}:{round(current_vote_pct,2)}% ({current_candidate_votes})\n')
+        file_out.write(f'{candidate}: {round(current_vote_pct,2)}%  ({current_candidate_votes})\n')
     file_out.write('---------------------------------\n')
     file_out.write(f'Winner: {winning_candidate}\n')
     file_out.write('---------------------------------\n')
