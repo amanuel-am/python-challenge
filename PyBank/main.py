@@ -17,6 +17,7 @@ with open (file_path) as budget_file:
 
     # skip the header
     next(csv_file)
+    header=next(csv_file)
 
     for row in csv_file:
         number_of_rows+=1

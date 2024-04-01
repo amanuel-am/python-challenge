@@ -15,6 +15,7 @@ with open (file_path) as election_file:
     csv_file=csv.reader(election_file)
     #skips a row in the file (first row = header row)
     next(csv_file)
+    header=next(csv_file)
 
     # read every row in the file
     for row in csv_file:
