@@ -6,7 +6,6 @@ import csv
 # create Variables
 file_path=r'PyBank\Resources\budget_data.csv'
 number_of_rows=0
-unique_dates= set()
 dates=[]
 profit_losses=[]
 total_changes=[]
@@ -51,3 +50,16 @@ with open (file_path) as budget_file:
     print(f'Greatest Increase in profits: {greatest_increase_date} (${greatest_increase})')
     print('---------------------------------')
     print(f'Greatest decrease in profits: {greatest_decrease_date} (${greatest_decrease})')
+
+out_file_path=r'PyBank\analysis\analysis.txt'
+with open(out_file_path,'w') as file_out:
+    file_out.write('Financial Analysis\n')
+    file_out.write('----------------------------\n')
+    file_out.write(f'Total Months: {number_of_dates}\n')
+    file_out.write(f'Total: ${total_profit_loss}\n')
+    file_out.write(f'Average change: $ {round(average_change,2)}\n')
+    file_out.write(f'Greatest Increase in profits: {greatest_increase_date} (${greatest_increase})\n')
+    file_out.write(f'Greatest decrease in profits: {greatest_decrease_date} (${greatest_decrease})\n')
+
+    
+                   
