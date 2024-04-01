@@ -3,7 +3,6 @@ import csv
 
 # creat variables
 file_path='PyPoll\Resources\election_data.csv'
-print('project work')
 total_votes=0
 candidates=[]
 candidate_votes =[]
