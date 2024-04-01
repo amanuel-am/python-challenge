@@ -53,7 +53,7 @@ with open (file_path) as budget_file:
     print(f'Greatest decrease in profits: {greatest_decrease_date} (${greatest_decrease})')
 
 # output file path
-out_file_path=r'PyBank\analysis\analysis.txt'
+out_file_path=r'PyBank\analysis\result.txt'
 # write on output file
 with open(out_file_path,'w') as file_out:
     file_out.write('Financial Analysis\n')

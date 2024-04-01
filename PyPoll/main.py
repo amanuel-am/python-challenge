@@ -56,7 +56,7 @@ for candidate in candidates:
     print('---------------------------------')
 
 # write the result to file
-out_file_path=r'PyPoll\analysis\analysis.txt'
+out_file_path=r'PyPoll\analysis\result.txt'
 with open (out_file_path,'w') as file_out:
     file_out.write('Election Results\n')
     file_out.write('---------------------------------\n')
