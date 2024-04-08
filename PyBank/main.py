@@ -1,4 +1,4 @@
-# start here
+# start herehttps://bootcampspot.instructure.com/profile/settings
 
 #import libraries
 import csv
@@ -16,7 +16,6 @@ with open (file_path) as budget_file:
     csv_file= csv.reader(budget_file)
 
     # skip the header
-    next(csv_file)
     header=next(csv_file)
 
     for row in csv_file:
@@ -26,7 +25,9 @@ with open (file_path) as budget_file:
         total_profit_loss+=int(row[1])
 
     #calculate change in profit/losses
+
     for i in range(len(profit_losses)-1):
+        i < len(profit_losses)-1
         change=profit_losses[i+1]-profit_losses[i]
         total_changes.append(change)
 
@@ -38,14 +39,14 @@ with open (file_path) as budget_file:
     greatest_decrease_date=dates[total_changes.index(greatest_decrease)+1]
         
     # print on terminal
-    print("xxxxxxxxxxxxxxxx",total_changes)
+    print(len(profit_losses))
     number_of_dates=len(dates)
     print('---------------------------------')
     print ('Total number of rows: ',number_of_rows)
     print('---------------------------------')
     print('Number of distinict dates: ',number_of_dates)
     print('---------------------------------')
-    print(f'Total amount of profit/losses: ${total_profit_loss}')
+    print(f'Total amount of profit/losses: ${sum(profit_losses)}')
     print('---------------------------------')
     print('the average change: $', round(average_change,2))
     print('---------------------------------')

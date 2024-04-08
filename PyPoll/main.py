@@ -14,7 +14,6 @@ winning_candidate_votes=0
 with open (file_path) as election_file:
     csv_file=csv.reader(election_file)
     #skips a row in the file (first row = header row)
-    next(csv_file)
     header=next(csv_file)
 
     # read every row in the file
@@ -51,7 +50,7 @@ for candidate in candidates:
 for candidate in candidates:
     current_candidate_votes = candidate_votes[candidates.index(candidate)]
     current_vote_pct= (current_candidate_votes/total_votes )*100
-    print(f'{candidate}:{round(current_vote_pct,2)}% ({current_candidate_votes})')
+    print(f'{candidate}:{round(current_vote_pct,3)}% ({current_candidate_votes})')
     print('---------------------------------')
     print(f'The winning candidate is {winning_candidate}')
     print('---------------------------------')
@@ -67,7 +66,7 @@ with open (out_file_path,'w') as file_out:
     for candidate in candidates:
         current_candidate_votes = candidate_votes[candidates.index(candidate)]
         current_vote_pct= (current_candidate_votes/total_votes )*100
-        file_out.write(f'{candidate}: {round(current_vote_pct,2)}%  ({current_candidate_votes})\n')
+        file_out.write(f'{candidate}: {round(current_vote_pct,3)}%  ({current_candidate_votes})\n')
     file_out.write('---------------------------------\n')
     file_out.write(f'Winner: {winning_candidate}\n')
     file_out.write('---------------------------------\n')
